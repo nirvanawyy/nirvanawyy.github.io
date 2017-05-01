@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      玩转node.js(1) | from zero to hero 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="Node.js——微信聊天图片发送功能实现图片实现功能分浏览器实现这次主要要写如何通过右键粘贴获得截图(没错,就是QQ截图)以及网络图片chrome123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转node.js(1) | from zero to hero">
+<meta property="og:url" content="http://yoursite.com/2017/05/01/玩转node-js-1/index.html">
+<meta property="og:site_name" content="from zero to hero">
+<meta property="og:description" content="Node.js——微信聊天图片发送功能实现图片实现功能分浏览器实现这次主要要写如何通过右键粘贴获得截图(没错,就是QQ截图)以及网络图片chrome123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676">
+<meta property="og:updated_time" content="2017-05-01T13:04:03.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="玩转node.js(1) | from zero to hero">
+<meta name="twitter:description" content="Node.js——微信聊天图片发送功能实现图片实现功能分浏览器实现这次主要要写如何通过右键粘贴获得截图(没错,就是QQ截图)以及网络图片chrome123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">from zero to hero</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/photo" title="" class="">照片</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">玩转node.js(1)</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-05-01" class="post-meta__date date">2017-05-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="Node-js——微信聊天图片发送功能实现"><a href="#Node-js——微信聊天图片发送功能实现" class="headerlink" title="Node.js——微信聊天图片发送功能实现"></a>Node.js——微信聊天图片发送功能实现</h2><h3 id="图片实现功能分浏览器实现"><a href="#图片实现功能分浏览器实现" class="headerlink" title="图片实现功能分浏览器实现"></a>图片实现功能分浏览器实现</h3><h5 id="这次主要要写如何通过右键粘贴获得截图-没错-就是QQ截图-以及网络图片"><a href="#这次主要要写如何通过右键粘贴获得截图-没错-就是QQ截图-以及网络图片" class="headerlink" title="这次主要要写如何通过右键粘贴获得截图(没错,就是QQ截图)以及网络图片"></a>这次主要要写如何通过右键粘贴获得截图(没错,就是QQ截图)以及网络图片</h5><h4 id="chrome"><a href="#chrome" class="headerlink" title="chrome"></a>chrome</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).on(<span class="string">'paste'</span>,<span class="string">'.emoji-wysiwyg-editor'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> clipboardData = (event.clipboardData || event.originalEvent.clipboardData);</div><div class="line">        <span class="comment">//chrome提供了直接获取剪切板上内容的API,有的chrome浏览器是event.clipboardData,有的则是event.originalEvent.clipboardData</span></div><div class="line">        <span class="keyword">if</span> ( clipboardData.items ) &#123;</div><div class="line">            <span class="keyword">var</span>  items = clipboardData.items,</div><div class="line">                len = items.length,</div><div class="line">            <span class="comment">//如果粘贴纯文本，那么len=1，如果粘贴网页图片，len=2, items[0].type = 'text/plain', items[1].type = 'image/*'</span></div><div class="line">            <span class="comment">//如果使用截图工具粘贴图片，len=1, items[0].type = 'image/png'</span></div><div class="line">                blob = <span class="literal">null</span>;</div><div class="line"></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">                <span class="built_in">console</span>.log(items[i]);</div><div class="line">                <span class="built_in">console</span>.log( items[i].type);</div><div class="line">                <span class="keyword">if</span> (items[i].type.indexOf(<span class="string">"image"</span>) !== <span class="number">-1</span>) &#123;</div><div class="line">                    event.preventDefault();</div><div class="line">                    blob = items[i].getAsFile();</div><div class="line">                    <span class="comment">//blob就是需要上传到服务器的内容</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">console</span>.log(blob);</div><div class="line">            <span class="keyword">if</span> ( blob !== <span class="literal">null</span> ) &#123;</div><div class="line">                <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</div><div class="line">                reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">                <span class="comment">//文件读取成功完成时触发</span></div><div class="line">                    <span class="comment">// event.target.result 即为图片的Base64编码字符串</span></div><div class="line">                    <span class="keyword">var</span> base64_str = event.target.result;</div><div class="line">                    <span class="comment">//console.log(base64_str);</span></div><div class="line">                    <span class="comment">//根据后端服务器来选择上传base64的编码或者直接上传blob对象</span></div><div class="line">                    doUpload(blob);</div><div class="line">                &#125;</div><div class="line">                reader.readAsDataURL(blob);</div><div class="line">                <span class="comment">//该方法将文件读取为一段以 data: 开头的字符串，这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。</span></div><div class="line">            &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//ajax</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doUpload</span>(<span class="params">file</span>) </span>&#123;</div><div class="line"></div><div class="line">    $(<span class="string">".pg-wrapper"</span>).show();</div><div class="line"></div><div class="line">    <span class="keyword">var</span> file = file;</div><div class="line">    <span class="comment">//获取img的后缀,png、jpg等</span></div><div class="line">    <span class="built_in">console</span>.log(file.type);</div><div class="line">    <span class="keyword">var</span> form = <span class="keyword">new</span> FormData();</div><div class="line">    form.append(<span class="string">"file"</span>, file);</div><div class="line">    form.append(<span class="string">"filetype"</span>,file.type);</div><div class="line">    <span class="built_in">console</span>.log(form);</div><div class="line"></div><div class="line">    $.ajax(&#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">"/uploadImg"</span>,</div><div class="line">        <span class="attr">type</span>: <span class="string">"POST"</span>,</div><div class="line">        <span class="attr">data</span>: form,</div><div class="line">        <span class="attr">async</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">processData</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">contentType</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">            $.Insertimage(result.data);</div><div class="line">            <span class="comment">//图片上传到服务器后台成功后返回图片的地址,Insetimage用于插入图片</span></div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">        <span class="comment">//$.Insertimage补充于jquery-emojirea.js这个闭包函数中</span></div><div class="line">        $.Insertimage= <span class="function"><span class="keyword">function</span> (<span class="params">url</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (CONST.hasFocus) &#123;</div><div class="line">            CONST.selection = util.saveSelection();</div><div class="line">                        <span class="comment">//CONST指向EmojiArea_WYSIWYG(上一篇文章提过,这个函数写在jquery-emojirea.js这个闭包函数中)</span></div><div class="line">                        <span class="comment">//如果文本编辑框div被处于focus状态,则调用 util.saveSelection()函数获取当前光标对象并复制给CONST.selection</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">var</span> $img = $(EmojiArea.createImage(url));</div><div class="line">                <span class="comment">//将url包装成为&lt;img src=url&gt;的格式</span></div><div class="line">        <span class="keyword">if</span> ($img[<span class="number">0</span>].attachEvent) &#123;</div><div class="line">            $img[<span class="number">0</span>].attachEvent(<span class="string">'onresizestart'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123; e.returnValue = <span class="literal">false</span>; &#125;, <span class="literal">false</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">console</span>.dir(CONST.$editor+<span class="string">"这里是const"</span>);</div><div class="line">        CONST.$editor.trigger(<span class="string">'focus'</span>);</div><div class="line">        <span class="keyword">if</span> (CONST.selection) &#123;</div><div class="line">            util.restoreSelection(CONST.selection);</div><div class="line">                        <span class="comment">//将文本编辑框的selection(也可以是历史记录)存入util中,设置当前selection为CONST.selection</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">try</span> &#123; util.replaceSelection($img[<span class="number">0</span>]); &#125; <span class="keyword">catch</span> (e) &#123;&#125;</div><div class="line">                <span class="comment">//对光标部分进行替换</span></div><div class="line">        CONST.onChange();</div><div class="line">                <span class="comment">//onChange方法用于将div的内容赋值给对应的textarea中</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="对应后台程序"><a href="#对应后台程序" class="headerlink" title="对应后台程序"></a>对应后台程序</h3><h5 id="后台用的是Node-js以及express"><a href="#后台用的是Node-js以及express" class="headerlink" title="后台用的是Node.js以及express"></a>后台用的是Node.js以及express</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formidable = <span class="built_in">require</span>(<span class="string">'formidable'</span>);</div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line">router.post(<span class="string">'/uploadImg'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> io = global.io;</div><div class="line"><span class="comment">//var io = require('socket.io').listen(server);global.io = io;,io是全局变量</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> form = <span class="keyword">new</span> formidable.IncomingForm();</div><div class="line">  <span class="keyword">var</span> path = <span class="string">""</span>;</div><div class="line">  <span class="keyword">var</span> fields = [];</div><div class="line"></div><div class="line">  form.encoding = <span class="string">'utf-8'</span>;</div><div class="line">  form.uploadDir = <span class="string">"upload"</span>;</div><div class="line">  form.keepExtensions = <span class="literal">true</span>;</div><div class="line">  form.maxFieldsSize = <span class="number">30000</span> * <span class="number">1024</span> * <span class="number">1024</span>;</div><div class="line"></div><div class="line"></div><div class="line">  <span class="keyword">var</span> uploadprogress = <span class="number">0</span>;</div><div class="line">  <span class="comment">//console.log("start:upload----"+uploadprogress);</span></div><div class="line"></div><div class="line">  form.parse(req);</div><div class="line"></div><div class="line">  form.on(<span class="string">'field'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">field, value</span>) </span>&#123;</div><div class="line">    fields[field] = value;</div><div class="line">    <span class="comment">//主要用于存储filetype</span></div><div class="line">  &#125;)</div><div class="line">      .on(<span class="string">'file'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">field, file</span>) </span>&#123;</div><div class="line">        path = <span class="string">'\\'</span> + file.path;</div><div class="line">        <span class="keyword">if</span>(fields[<span class="string">'filetype'</span>].match(<span class="regexp">/image/</span>))&#123;</div><div class="line">          <span class="keyword">var</span> str = fields[<span class="string">'filetype'</span>].match(<span class="regexp">/[^image\/]\w+$/</span>);<span class="comment">//提取image/后面部分的图片后缀</span></div><div class="line">          <span class="keyword">var</span> str = str[<span class="number">0</span>];</div><div class="line">          <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(str);</div><div class="line">          <span class="keyword">if</span>(!file.path.match(reg))&#123;</div><div class="line">          <span class="comment">//如果file的路径不含图片后缀则执行以下操作</span></div><div class="line">            fs.rename(file.path,file.path+<span class="string">'.'</span>+str, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</div><div class="line">              <span class="keyword">if</span>(err)&#123;</div><div class="line">                <span class="keyword">throw</span> err;</div><div class="line">              &#125;</div><div class="line">              <span class="built_in">console</span>.log(<span class="string">'done!'</span>);</div><div class="line">              path = <span class="string">'\\'</span> + file.path+<span class="string">'.'</span>+str;</div><div class="line">            &#125;)</div><div class="line">          &#125;<span class="keyword">else</span>&#123;</div><div class="line">            path = <span class="string">'\\'</span> + file.path;</div><div class="line">          &#125;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          path = <span class="string">'\\'</span> + file.path;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">      &#125;)</div><div class="line">      .on(<span class="string">'progress'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">bytesReceived, bytesExpected</span>) </span>&#123;</div><div class="line"></div><div class="line">        uploadprogress = (bytesReceived / bytesExpected * <span class="number">100</span>).toFixed(<span class="number">0</span>);</div><div class="line">        <span class="comment">//console.log("upload----"+ uploadprogress);</span></div><div class="line">        io.sockets.in(<span class="string">'sessionId'</span>).emit(<span class="string">'uploadProgress'</span>, uploadprogress);</div><div class="line">      &#125;)</div><div class="line">      .on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">//console.log('-&gt; upload done\n');</span></div><div class="line">        entries.code = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(fields[<span class="string">'filetype'</span>].match(<span class="regexp">/image/</span>))&#123;</div><div class="line">          <span class="keyword">var</span> str = fields[<span class="string">'filetype'</span>].match(<span class="regexp">/[^image\/]\w+$/</span>);</div><div class="line">          <span class="keyword">var</span> str = str[<span class="number">0</span>];</div><div class="line">          <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(str);</div><div class="line">          <span class="keyword">if</span>(!path.match(reg))&#123;</div><div class="line">            path = path + <span class="string">'.'</span> + str;</div><div class="line">          &#125;</div><div class="line">        &#125;<span class="comment">//再次检查path是否正确(其实上面一段检查并没有什么卵用)</span></div><div class="line"></div><div class="line"></div><div class="line">        entries.data = path;</div><div class="line">        res.writeHead(<span class="number">200</span>, &#123;</div><div class="line">          <span class="string">'content-type'</span>: <span class="string">'text/json'</span></div><div class="line">        &#125;);</div><div class="line">        res.end(<span class="built_in">JSON</span>.stringify(entries));<span class="comment">//将图片地址作为json数据传送到前台</span></div><div class="line">      &#125;)</div><div class="line">      .on(<span class="string">"err"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> callback=<span class="string">"&lt;script&gt;alert('"</span>+err+<span class="string">"');&lt;/script&gt;"</span>;</div><div class="line">        res.end(callback);<span class="comment">//这段文本发回前端就会被同名的函数执行</span></div><div class="line">      &#125;).on(<span class="string">"abort"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> callback=<span class="string">"&lt;script&gt;alert('"</span>+ttt+<span class="string">"');&lt;/script&gt;"</span>;</div><div class="line">    res.end(callback);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="firefox"><a href="#firefox" class="headerlink" title="firefox"></a>firefox</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).on(<span class="string">'paste'</span>,<span class="string">'.emoji-wysiwyg-editor'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">           setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="comment">//设置setTimeout的原因是为了保证图片先插入到div里，然后去获取值</span></div><div class="line">                $(<span class="string">".emoji-wysiwyg-editor img"</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">"src"</span>).toString().match(<span class="regexp">/base64/</span>))&#123;<span class="comment">//火狐浏览器不提供获取clipboard内容的api,但是允许粘贴图片到可编辑的div中,粘贴后的图片的src是base64编码的形式,可将其上传到服务器</span></div><div class="line">                        <span class="keyword">var</span> base64_str = $(<span class="keyword">this</span>).attr(<span class="string">"src"</span>);</div><div class="line">                        doUploadFF(base64_str);</div><div class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">"alt"</span>)===<span class="literal">undefined</span>||!$(<span class="keyword">this</span>).attr(<span class="string">"alt"</span>).toString().match(<span class="regexp">/^:.+:$/</span>))</div><div class="line">                    &#123;</div><div class="line">                        <span class="keyword">var</span> base64_str = $(<span class="keyword">this</span>).attr(<span class="string">"src"</span>);</div><div class="line">                        doUploadFF(base64_str);</div><div class="line">                    &#125;</div><div class="line">                    <span class="comment">//两个if语句第一个用于获取截图的到的本地图片,第二个用于获取网页上的图片复制过来的,貌似没差</span></div><div class="line">                &#125;)</div><div class="line">            &#125;, <span class="number">1</span>);</div><div class="line">&#125;)</div><div class="line"><span class="comment">//ajax</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doUploadFF</span>(<span class="params">base64_str</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(base64_str);</div><div class="line"></div><div class="line">    $.ajax(&#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">"/uploadImgFF"</span>,</div><div class="line">        <span class="attr">type</span>: <span class="string">"POST"</span>,</div><div class="line">        <span class="attr">data</span>:<span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">            <span class="string">'base64'</span>:base64_str,</div><div class="line">        &#125;),</div><div class="line">        <span class="attr">async</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">processData</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">contentType</span>:<span class="string">"application/json"</span>,</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(result.store_path);</div><div class="line">            <span class="comment">//$.Insetimage(result.data);</span></div><div class="line">            $(<span class="string">".emoji-wysiwyg-editor img"</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">"src"</span>).toString().match(<span class="regexp">/base64/</span>))&#123;</div><div class="line">                    $(<span class="keyword">this</span>).attr(&#123;<span class="attr">src</span>:result.store_path,<span class="attr">alt</span>:<span class="string">":"</span>+result.store_path+<span class="string">":"</span>&#125;);</div><div class="line">                    $(<span class="keyword">this</span>).addClass(<span class="string">"Notemoji"</span>);</div><div class="line">                    $.constChange();</div><div class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">"alt"</span>)===<span class="literal">undefined</span>||!$(<span class="keyword">this</span>).attr(<span class="string">"alt"</span>).toString().match(<span class="regexp">/^:.+:$/</span>))</div><div class="line">                &#123;</div><div class="line">                    $(<span class="keyword">this</span>).attr(&#123;<span class="attr">src</span>:result.store_path,<span class="attr">alt</span>:<span class="string">":"</span>+result.store_path+<span class="string">":"</span>&#125;);</div><div class="line">                    $(<span class="keyword">this</span>).addClass(<span class="string">"Notemoji"</span>);</div><div class="line">                    $.constChange();</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="后台"><a href="#后台" class="headerlink" title="后台"></a>后台</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">router.post(<span class="string">'/uploadImgFF'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">req,res,next</span>) </span>&#123;</div><div class="line">  <span class="comment">//1.获取客户端传来的src_str字符串=&gt;判断是base64还是普通地址=&gt;获取图片类型后缀(jpg/png etc)</span></div><div class="line"><span class="comment">//=&gt;如果是base64替换掉"前缀"("data:image\/png;base64," etc)</span></div><div class="line"><span class="comment">//2.base64 转为 buffer对象 普通地址则先down下来</span></div><div class="line"><span class="comment">//3.写入硬盘(后续可以将地址存入数据库)</span></div><div class="line"><span class="comment">//4.返回picture地址</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> src_str = req.body.base64,</div><div class="line">      timestamp = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</div><div class="line">  <span class="built_in">console</span>.log(src_str);</div><div class="line"></div><div class="line">  <span class="keyword">if</span> ( src_str.match(<span class="regexp">/^data:image\/png;base64,|^data:image\/jpg;base64,|^data:image\/jpg;base64,|^data:image\/bmp;base64,/</span>) ) &#123;</div><div class="line">    <span class="comment">//处理截图 src_str为base64字符串</span></div><div class="line"></div><div class="line">    <span class="keyword">var</span> pic_suffix = src_str.split(<span class="string">';'</span>,<span class="number">1</span>)[<span class="number">0</span>].split(<span class="string">'/'</span>,<span class="number">2</span>)[<span class="number">1</span>],</div><div class="line">        base64 = src_str.replace(<span class="regexp">/^data:image\/png;base64,|^data:image\/jpg;base64,|^data:image\/jpg;base64,|^data:image\/bmp;base64,/</span>, <span class="string">''</span>),</div><div class="line">        buf = <span class="keyword">new</span> Buffer(base64, <span class="string">'base64'</span>),</div><div class="line">        store_path = <span class="string">'./upload/'</span> + timestamp + <span class="string">'.'</span> + pic_suffix;</div><div class="line">        <span class="built_in">console</span>.log(store_path);</div><div class="line"></div><div class="line">    fs.writeFile(store_path, buf, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        res.json(&#123;<span class="string">'store_path'</span>: store_path&#125;);</div><div class="line">      &#125;</div><div class="line">  &#125;);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"网页图片"</span>+src_str);</div><div class="line">  <span class="keyword">var</span> temp_array = src_str.split(<span class="string">'.'</span>),</div><div class="line">      pic_suffix = temp_array[temp_array.length - <span class="number">1</span>],</div><div class="line">      store_path = <span class="string">'./upload/'</span> + timestamp + <span class="string">'.'</span> + pic_suffix,</div><div class="line">      wstream = fs.createWriteStream(store_path);</div><div class="line">  <span class="built_in">console</span>.log(store_path);</div><div class="line">  request(src_str).pipe(wstream);</div><div class="line">  wstream.on(<span class="string">'finish'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"进入finish"</span>);</div><div class="line">    <span class="keyword">if</span>( err ) &#123;</div><div class="line">      <span class="keyword">throw</span> err;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      res.json(&#123;<span class="string">'store_path'</span>: store_path&#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
